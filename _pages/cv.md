@@ -9,6 +9,8 @@ redirect_from:
 
 {% include base_path %}
 
+[CV download](https://jeongbaechoi.github.io/files/CV-Jeongbae_Choi-2025-08-08.pdf)
+
 Education
 ======
 * Ph.D. student in the School of Information Science, Syracuse University (August 2020-current)
