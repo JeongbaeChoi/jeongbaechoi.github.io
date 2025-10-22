@@ -36,7 +36,7 @@ Academic experience
 Professional experience
 ======
 * Social Sciences Librarian (January 2015-June 2017, Sungkyunkwan University)
-  * Graduate Research Suuport
+  * Graduate Research Support
   * Undergraduate Learning Support
   * Collection Development
   * Research Commons Operations
