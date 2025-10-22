@@ -28,7 +28,6 @@ plugins:
   - jekyll-gist
   - jekyll-paginate
   - jekyll-sitemap
-  - jekyll-redirect-from
   - jemoji
 
 # Site Author - The following control what appear as part of the author content on the side bar.
