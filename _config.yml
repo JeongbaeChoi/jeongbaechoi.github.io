@@ -18,9 +18,6 @@ url                      : "https://jeongbaechoi.github.io" # The base hostname 
 baseurl                  : ""
 repository               : "jeongbaechoi/jeongbaechoi.github.io"
 
-# Use academipages
-remote_theme             : "academicpages/academicpages"
-
 # Plugins (GitHub Pages–compatible)
 plugins:
   - jekyll-remote-theme
