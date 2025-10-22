@@ -26,9 +26,9 @@ author:
   avatar           : "profile.png"
   name             : "Jeongbae Choi"
   pronouns         : "he/him/his"  
-  bio              : "Ph.D. Candidate (ABD) |  Syracuse University iSchool  |  Former academic librarian"
+  bio              : "Ph.D. Candidate (ABD) | Former academic librarian"
   location         : "Syracuse, NY, USA"
-  employer         : "Red Brick University"
+  employer         : "Syracuse University"
   uri              : # URL
   email            : "jechoi@syr.edu" 
 
@@ -40,7 +40,7 @@ author:
   impactstory      : # URL
   orcid            : ""https://orcid.org/0000-0002-4320-0008""
   semantic         : # URL
-  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
+  pubmed           : # URL
   researchgate     : # URL
   scopus           : # URL
 
