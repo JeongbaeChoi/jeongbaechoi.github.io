@@ -8,5 +8,5 @@ date: 2013-03-01
 location: "Seoul, South Korea"
 ---
 
-Role: Graduate Teaching Assistant 
-Tasks: Course Evaluation
+- Role: Graduate Teaching Assistant 
+- Tasks: Course Evaluation
