@@ -1,8 +1,8 @@
-name: Build and Deploy Jekyll
+name: GitHub Pages (Jekyll)
 
 on:
   push:
-    branches: [ master ]   # <-- your repo uses 'master'
+    branches: [ master ]        # your default branch is master
   workflow_dispatch:
 
 permissions:
@@ -19,25 +19,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
-      - uses: ruby/setup-ruby@v1
+      - uses: actions/configure-pages@v5
+      # Build the site with the officially supported github-pages stack
+      - uses: actions/jekyll-build-pages@v1
+      - uses: actions/upload-pages-artifact@v3
         with:
-          ruby-version: '3.2'
-          bundler-cache: true
-
-      # Use GitHub Pages' approved stack: no custom Gemfile required
-      - name: Install Jekyll and allowed plugins
-        run: |
-          gem install jekyll -v "~> 4.3" || gem install jekyll
-          gem install jekyll-feed jekyll-gist jekyll-paginate jekyll-sitemap jekyll-redirect-from jemoji
-
-      - name: Build site
-        run: jekyll build -d _site
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: _site
+          path: ./_site
 
   deploy:
     needs: build
