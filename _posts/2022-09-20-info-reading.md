@@ -3,7 +3,7 @@ title: 'Concept of Information: Selected Basic Readings'
 date: 2022-09-20
 permalink: /posts/2022/09/info-reading/
 tags:
-  - Philosophy of Information
+  - philosophy of information
 ---
 
 These are selected introductory readings on the concept and philosophy of information.
