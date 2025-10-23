@@ -10,6 +10,8 @@ tags:
   - Social Ontology
 ---
 
+These are selected introductory readings on the philosophy of social science and on critical realism.
+
 Reading List
 ======
 Archer, M. S., Bhaskar, R., Collier, A., Lawson, T., & Norrie, A. (Eds.). (1998). Critical Realism : Essential Readings. Routledge. 
