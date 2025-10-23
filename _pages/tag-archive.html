@@ -7,50 +7,87 @@ author_profile: true
 
 {% include base_path %}
 
-{%- assign all_tags = "" | split: "" -%}
+{%- comment -%} 1) Collect all tag names from posts and all other collections {%- endcomment -%}
+{% assign all_tags = "" | split: "" %}
 
 {%- for p in site.posts -%}
-  {%- if p.tags -%}{% for t in p.tags %}{% assign all_tags = all_tags | push: t %}{% endfor %}{%- endif -%}
+  {%- if p.tags -%}
+    {%- for t in p.tags -%}
+      {% assign all_tags = all_tags | push: t %}
+    {%- endfor -%}
+  {%- endif -%}
 {%- endfor -%}
 
 {%- for c in site.collections -%}
   {%- assign label = c.label -%}
   {%- if label != "posts" -%}
     {%- for item in site[label] -%}
-      {%- if item.tags -%}{% for t in item.tags %}{% assign all_tags = all_tags | push: t %}{% endfor %}{%- endif -%}
+      {%- if item.tags -%}
+        {%- for t in item.tags -%}
+          {% assign all_tags = all_tags | push: t %}
+        {%- endfor -%}
+      {%- endif -%}
     {%- endfor -%}
   {%- endif -%}
 {%- endfor -%}
 
 {% assign all_tags = all_tags | uniq | sort %}
 
+{%- comment -%} 2) Tag index (jump links) {%- endcomment -%}
 <ul>
   {%- for tag in all_tags -%}
     <li><a href="#{{ tag | slugify }}">{{ tag }}</a></li>
   {%- endfor -%}
 </ul>
 
+{%- comment -%} 3) For each tag, gather matching items from posts + all collections {%- endcomment -%}
 {%- for tag in all_tags -%}
+  {% assign tag_norm = tag | downcase | strip %}
   <h2 id="{{ tag | slugify }}" class="archive__subtitle">{{ tag }}</h2>
 
   {%- assign results = "" | split: "" -%}
 
+  {# from blog posts #}
   {%- for p in site.posts -%}
-    {%- if p.tags and p.tags contains tag -%}{% assign results = results | push: p %}{%- endif -%}
+    {%- if p.tags -%}
+      {% assign p_tags_norm = p.tags | join:"||" | downcase %}
+      {% if p_tags_norm contains tag_norm %}
+        {% assign results = results | push: p %}
+      {% endif %}
+    {%- endif -%}
   {%- endfor -%}
 
+  {# from all other collections #}
   {%- for c in site.collections -%}
     {%- assign label = c.label -%}
     {%- if label != "posts" -%}
       {%- for item in site[label] -%}
-        {%- if item.tags and item.tags contains tag -%}{% assign results = results | push: item %}{%- endif -%}
+        {%- if item.tags -%}
+          {% assign i_tags_norm = item.tags | join:"||" | downcase %}
+          {% if i_tags_norm contains tag_norm %}
+            {% assign results = results | push: item %}
+          {% endif %}
+        {%- endif -%}
       {%- endfor -%}
     {%- endif -%}
   {%- endfor -%}
 
+  {%- comment -%} 4) Deduplicate by URL and sort by date (newest first) {%- endcomment -%}
+  {% assign seen_urls = "" | split: "" %}
+  {% assign filtered = "" | split: "" %}
   {% assign results = results | sort: "date" | reverse %}
 
-  {%- for post in results -%}
+  {% for item in results %}
+    {% assign u = item.url | default: item.id | to_s %}
+    {% unless seen_urls contains u %}
+      {% assign filtered = filtered | push: item %}
+      {% assign seen_urls = seen_urls | push: u %}
+    {% endunless %}
+  {% endfor %}
+
+  {%- comment -%} 5) Render {%- endcomment -%}
+  {% for post in filtered %}
     {% include archive-single.html %}
-  {%- endfor -%}
+  {% endfor %}
+
 {%- endfor -%}
