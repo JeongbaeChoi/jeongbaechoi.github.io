@@ -6,6 +6,8 @@ tags:
   - Philosophy of Information
 ---
 
+These are selected introductory readings on the concept and philosophy of information.
+
 Reading List
 ======
 
