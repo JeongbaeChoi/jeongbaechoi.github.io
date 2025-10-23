@@ -1,0 +1,50 @@
+name: Build and Deploy Jekyll
+
+on:
+  push:
+    branches: [ master ]   # <-- your repo uses 'master'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+          bundler-cache: true
+
+      # Use GitHub Pages' approved stack: no custom Gemfile required
+      - name: Install Jekyll and allowed plugins
+        run: |
+          gem install jekyll -v "~> 4.3" || gem install jekyll
+          gem install jekyll-feed jekyll-gist jekyll-paginate jekyll-sitemap jekyll-redirect-from jemoji
+
+      - name: Build site
+        run: jekyll build -d _site
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
