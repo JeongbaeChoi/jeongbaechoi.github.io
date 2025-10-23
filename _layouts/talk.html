@@ -36,18 +36,17 @@ layout: default
           <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i>Date:</strong> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time></p>
         {% endif %}
         {% if page.talk_type %}<p>{{page.talk_type}} at {{ page.venue }},  {{page.location}} {% endif %}
-
+        {% if page.paperurl %}
+          <p><a href="{{ page.paperurl }}">Paper Link</a></p>
+        {% endif %}
+        {% if page.citation %}
+          <p><strong>Citation:</strong> {{ page.citation }}</p>
+        {% endif %}
         </header>
       {% endunless %}
 
       <section class="page__content" itemprop="text">
         {{ content }}
-         {% if page.paperurl %}
-            <p> <a href="{{ page.paperurl }}">Paper Link</a> </p>
-         {% endif %}
-         {% if page.citation %} 
-            <p> <strong>Citation:</strong> {{ page.citation }} </p>
-         {% endif %}
           {% if page.link %}
             <div> <a href="{{ page.link }}" class="btn">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a> </div>
          {% endif %} 
