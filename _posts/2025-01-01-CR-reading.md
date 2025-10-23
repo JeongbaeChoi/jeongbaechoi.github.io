@@ -3,11 +3,11 @@ title: 'Philosophy of Social Science and Critical Realism: Selected Basic Readin
 date: 2025-01-01
 permalink: /posts/2025/01/CR-reading/
 tags:
-  - Philosophy of Social Science
-  - Philosophy of Science
-  - Critical Realism
-  - Scientific Realism
-  - Social Ontology
+  - philosophy of social science
+  - philosophy of science
+  - critical realism
+  - scientific realism
+  - social ontology
 ---
 
 These are selected introductory readings on the philosophy of social science and on critical realism.
