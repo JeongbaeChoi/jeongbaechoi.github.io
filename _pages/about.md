@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-[CV download](https://jeongbaechoi.github.io/files/CV-Jeongbae_Choi-2025-08-08.pdf)
+[CV download](https://jeongbaechoi.github.io/files/CV-Jeongbae_Choi-2026-01-31.pdf)
 
 
 **Jeongbae Choi** is a PhD candidate at the School of Information Studies, [Syracuse University](https://ischool.syr.edu/jeongbae-choi/).
@@ -19,7 +19,7 @@ I study **how information and technology can expand people’s real freedoms**�
 **Key focus areas:** Informational well-being and informational agency, Information/data/digital/AI literacies, Library education and learning theories, Historical librarianship, Social and community informatics, Critical data and AI studies, Information policy, and Smart cities. 
 (See more at my [Publications page](https://jeongbaechoi.github.io/publications/).)
 
-For my **dissertation** study, I reframe Information Literacy as Capability (ILaC)—combined capabilities for informed beings and doings—based on realist approaches, through the integration of critical realism in the philosophy of science, social realism in curriculum studies, and the capability approach in political economy. 
+For my **dissertation** study, I reframe Information Literacy as Capability (ILaC)—combined capabilities for informed beings and doings—based on realist approaches, through the integration of critical realism in the philosophy of science and the capability approach in political economy. 
 
 **Current research topics:** Information Literacy as a Capability (ILaC), Librarianship as an Integrative Science (L-IS), Information Communities for Social Transformation, and Reformulating the Data-Information-Knowledge-Wisdom (DIKW) hierarchy. 
 
