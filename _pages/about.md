@@ -10,7 +10,7 @@ redirect_from:
 [CV download](https://jeongbaechoi.github.io/files/CV-Jeongbae_Choi-2026-01-31.pdf)
 
 
-**Jeongbae Choi** is a PhD at the School of Information Studies, [Syracuse University](https://ischool.syr.edu/jeongbae-choi/).
+**Jeongbae Choi** is a Ph.D. at the School of Information Studies, [Syracuse University](https://ischool.syr.edu/jeongbae-choi/).
 
 I study **how information and technology can expand people’s real freedoms**—what individuals can be and do with them. To advance this agenda, I work at the **interface of theory and practice in library and information science (LIS)**, from foundational philosophy of information, science, and technology to the applied design and evaluation of education, practice, and policy.
 
