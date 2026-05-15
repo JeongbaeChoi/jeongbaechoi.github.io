@@ -12,7 +12,7 @@ site_theme               : "default" # Currently available options are "default"
 title                    : "Jeongbae Choi"
 title_separator          : "-"
 name                     : &name "Jeongbae Choi"
-description              : &description "Ph.D. Candidate (ABD) at Syracuse University iSchool (School of Information Studies)"   # Update this with a general description of your site, this is the default if not overridden by a page
+description              : &description "Ph.D. at Syracuse University iSchool (School of Information Studies)"   # Update this with a general description of your site, this is the default if not overridden by a page
 url                      : "https://jeongbaechoi.github.io" # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : ""
@@ -36,7 +36,7 @@ author:
   avatar           : "profile.jpg"
   name             : "Jeongbae Choi"
   pronouns         : "he/him/his"  
-  bio              : "Ph.D. Candidate (ABD) | Former academic librarian"
+  bio              : "Ph.D. | Former academic librarian"
   location         : "Syracuse, NY, USA"
   employer         : "Syracuse University"
   uri              : # URL
